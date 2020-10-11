@@ -1,9 +1,10 @@
 import { Column, Entity } from 'typeorm';
 
-import { BaseEntity } from 'shared/base.entity';
+import { BaseEntity } from 'src/shared/base.entity';
+import { IUser } from './user';
 
 @Entity('user')
-export class User extends BaseEntity {
+export class User extends BaseEntity implements IUser {
 
   @Column({ unique: true })
   public email: string;
