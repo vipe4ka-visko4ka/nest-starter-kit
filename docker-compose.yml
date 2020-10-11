@@ -2,7 +2,7 @@ version: '3'
 services:
   postgres:
     image: postgres
-    container_name: shop-postgres
+    container_name: starter-kit-postgres
     env_file: 
       - .env
     ports:
