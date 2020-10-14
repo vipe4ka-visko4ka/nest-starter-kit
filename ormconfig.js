@@ -9,4 +9,8 @@ const config = {
   entities: ['dist/**/*.entity{.ts,.js}']
 };
 
+if (JSON.parse(process.env.POSTGRES_SSL_ENABLED)) {
+  config.ssl = { rejectUnauthorized: false };
+}
+
 module.exports = config;
