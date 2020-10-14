@@ -9,4 +9,8 @@ export class ApiConfigService {
   get PORT(): number {
     return Number(this.configService.get('PORT'));
   }
+
+  get SALT_ROUNDS(): number {
+    return Number(this.configService.get('SALT_ROUNDS'));
+  }
 }

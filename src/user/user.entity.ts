@@ -9,6 +9,12 @@ export class UserEntity extends BaseEntity implements IUser {
   @Column({ unique: true })
   public email: string;
 
-  @Column({ select: false })
+  @Column()
   public password: string;
+
+  public serealize() {
+    delete this.password;
+
+    return this;
+  }
 }
