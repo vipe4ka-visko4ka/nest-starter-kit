@@ -12,9 +12,8 @@ export class UserEntity extends BaseEntity implements IUser {
   @Column()
   public password: string;
 
-  public serealize() {
-    delete this.password;
-
-    return this;
+  public static serealize(user: IUser) {
+    delete user.password;
+    return user;
   }
 }
